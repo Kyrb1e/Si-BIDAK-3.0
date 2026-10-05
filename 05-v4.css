@@ -1,0 +1,28 @@
+@keyframes pop{0%{transform:scale(.8);opacity:.4}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(226,169,47,0)}50%{box-shadow:0 0 0 7px rgba(226,169,47,.3)}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes sheen{from{background-position:160% 0}to{background-position:-160% 0}}
+header{position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.09) 50%,transparent 65%);background-size:250% 100%;animation:sheen 10s linear infinite}
+.sq.last img{animation:pop .34s cubic-bezier(.2,.9,.3,1.3)}
+.sq:hover{filter:brightness(1.07)}
+#evw{transition:height .7s cubic-bezier(.2,.8,.2,1)}
+.card{animation:rise .5s both;transition:box-shadow .25s,border-color .25s}
+.card:hover{box-shadow:0 12px 30px rgba(15,42,74,.15)}
+button:active{transform:scale(.97)}
+button:focus-visible,.sq:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:8px;margin:12px 0 6px}
+#pgrid .pc{display:grid;grid-template-columns:52px 1fr;column-gap:10px;align-items:center;text-align:left;background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:9px 10px;font-weight:400;transition:transform .18s,box-shadow .18s,border-color .18s}
+#pgrid .pc>svg,#pgrid .sfav{grid-row:1/4}
+#pgrid .pc b{font-size:.82rem;font-weight:700}
+#pgrid .pc small{font-size:.68rem;color:var(--mute);line-height:1.25}
+#pgrid .pc:hover{transform:translateY(-2px);border-color:var(--acc);box-shadow:0 8px 18px rgba(0,0,0,.13)}
+#pgrid .pc[aria-pressed=true]{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc);background:var(--card)}
+.pc .bar{display:block;height:4px;border-radius:9px;background:var(--line);overflow:hidden;margin-top:5px}
+.pc .bar u{display:block;height:100%;background:linear-gradient(90deg,#3b82c4,#e2a92f,#d64034)}
+.sfav{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--rule);color:#fff;font-size:.8rem;font-weight:700}
+.hab{font-size:.78rem;min-height:1.2em}
+.bot-av svg{width:100%;height:100%;border-radius:50%;display:block}
+.bot-av.th{border-radius:50%;animation:glow 1.4s infinite}
+.pstrip .pk svg{width:24px;height:24px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

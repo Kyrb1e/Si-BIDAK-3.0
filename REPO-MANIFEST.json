@@ -1,0 +1,386 @@
+{
+  "source": "legacy/Si_BIDAK_v6.html",
+  "purpose": "GitHub-friendly split of the original single-file app",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 39,
+      "sha256": "7d23d514a6f43c666ac620c30531878ee2ee5e0ab0a470c7577fc161620d335c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 126,
+      "sha256": "bb03ceb7ceab3630f77069dcddfd9a0462032172ac2a9358f89929763f37e324"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2268,
+      "sha256": "621896367afd4c544bb561b74c8e54502121a1fd92693c2db53f3f5a24b03fbc"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "bytes": 779,
+      "sha256": "98c590b4943b6b96eb751198493f817e937aa5511b9cb3c869f1fd7498da65ab"
+    },
+    {
+      "path": "assets/stockfish/stockfish.js",
+      "bytes": 21312,
+      "sha256": "2006de9131553b83d587cbaaa07f17517f53e855b34706a17c6db5e9bf25549b"
+    },
+    {
+      "path": "assets/stockfish/stockfish.wasm",
+      "bytes": 1787571,
+      "sha256": "57ac2d72312aba346760e3f173f687a8c211208e97a87268436f7f0e10bb5387"
+    },
+    {
+      "path": "css/01-base.css",
+      "bytes": 88653,
+      "sha256": "f5478645381b193df08bacb9997dc6a2a14097f369ea889dea233db917350853"
+    },
+    {
+      "path": "css/02-theme.css",
+      "bytes": 102125,
+      "sha256": "34afeac21806acc7b3b2f54a4fa44d1d0b73f97aec1c1e720cd7ac78e7b483df"
+    },
+    {
+      "path": "css/03-v2.css",
+      "bytes": 13894,
+      "sha256": "fd88c4405fa5dd233f24475ab721a5503fcf7a0a8a41baadb136d3a5ea9ce8b2"
+    },
+    {
+      "path": "css/04-utility.css",
+      "bytes": 431,
+      "sha256": "eb3636761f4a2bd7dce8f9d105502b2b4668db93cab232d6ebfd243b4dc8dfca"
+    },
+    {
+      "path": "css/05-v4.css",
+      "bytes": 2499,
+      "sha256": "fddeb23550f232afe71550f9d86b2cf8f81b8300908038b5a4a3ac15297aa287"
+    },
+    {
+      "path": "css/06-v5.css",
+      "bytes": 3763,
+      "sha256": "3761623a17a664d17d4202d5febfab0ee187c449e8a80aebcfea7e6e877efe22"
+    },
+    {
+      "path": "css/07-v6.css",
+      "bytes": 3863,
+      "sha256": "49d93ba63c59e3efd0be204215d5f55107c5501a5ea6efb231e2538201539b23"
+    },
+    {
+      "path": "css/08-pro.css",
+      "bytes": 2747,
+      "sha256": "6c87a062db71be521a630985ac21ab7a4098e711c2bf208e2efb3322306f5193"
+    },
+    {
+      "path": "css/09-v3.css",
+      "bytes": 5497,
+      "sha256": "22cedee2f3187c73c938f242a86a4ed5d2b98ee078ffc6642445e768bd13e3c2"
+    },
+    {
+      "path": "css/10-v7.css",
+      "bytes": 11984,
+      "sha256": "552191111ea3936f8ce78452313cab076f53d76bf622d56aebb2bb25a13ac43a"
+    },
+    {
+      "path": "css/11-v8.css",
+      "bytes": 5350,
+      "sha256": "466af1bf64e1d4bd8477b1f14e930c4ae83f91501a3947e451d7d9430fcd751d"
+    },
+    {
+      "path": "data/books/bk-cr.gz",
+      "bytes": 779,
+      "sha256": "d4a352a289aefa9f54764a029fad9c3f1ff4dcca740259ab3c6e1efede12c251"
+    },
+    {
+      "path": "data/books/bk-fi.gz",
+      "bytes": 20296,
+      "sha256": "a4b9cf70dc0ad20aa7fc434db5688642c23abb49b07380b2a33bd34c16e08aad"
+    },
+    {
+      "path": "data/books/bk-fz.gz",
+      "bytes": 123407,
+      "sha256": "0b75fc664c30d8e897fbcffa12697f8279790381722b86cccf5353bc73a03f28"
+    },
+    {
+      "path": "data/books/bk-ka.gz",
+      "bytes": 70550,
+      "sha256": "602d6ee4648db480ef2f8d29687a86ec467c91f328d07cecfd94f1f159e73b45"
+    },
+    {
+      "path": "data/books/bk-kp.gz",
+      "bytes": 52944,
+      "sha256": "d2663234170538fc1ac671d0d212a23a6b46600ed57b00d7894edf9dd64dc29f"
+    },
+    {
+      "path": "data/books/bk-mc.gz",
+      "bytes": 56910,
+      "sha256": "ba7db16062bf7b2b1eba64aa96ad4ecc2a0ff9c3b4e9a0079f7befb9044398e7"
+    },
+    {
+      "path": "data/books/bk-mo.gz",
+      "bytes": 7363,
+      "sha256": "277db55052296d14ae0dcb758fd146f343a77aba5a9eae349ebec04c6335caaf"
+    },
+    {
+      "path": "data/books/bk-nk.gz",
+      "bytes": 231590,
+      "sha256": "a0427711eaee46c27a42ad76822b75d4c3cf8600c3cd47cac3993f0207a1c8c6"
+    },
+    {
+      "path": "data/books/pl-fi-bb.gz",
+      "bytes": 174277,
+      "sha256": "825a50e609228d8cbd409986e9f911b1629ae7ef8cfd173db1fd1f0fa201105e"
+    },
+    {
+      "path": "data/books/pl-fi-meta.gz",
+      "bytes": 15051,
+      "sha256": "13e938472f81528cc6a4933a0fd3e1cea0bde1e61a09b9390d133caf9f1ff963"
+    },
+    {
+      "path": "data/books/pl-fi-st.gz",
+      "bytes": 32243,
+      "sha256": "38ea7eb04ad5e2ececa338ef93c7b8a868419132d275a3db0f6046feb676850c"
+    },
+    {
+      "path": "data/books/pl-fz-bb.gz",
+      "bytes": 1261534,
+      "sha256": "a6f379f9623c22da2f4abbc153959adb218f5f9aad80906800439e3c57fb212c"
+    },
+    {
+      "path": "data/books/pl-fz-meta.gz",
+      "bytes": 106365,
+      "sha256": "3922f4b3c68b347017fc0bf2593d70563cc312cb9e90965388b11f0a66e2fe90"
+    },
+    {
+      "path": "data/books/pl-fz-st.gz",
+      "bytes": 195465,
+      "sha256": "234e3ea4c9d2873b89c8335dc150b00b8261050231846f6cf313df48d0748854"
+    },
+    {
+      "path": "data/books/pl-ka-bb.gz",
+      "bytes": 743553,
+      "sha256": "e304b27369a8accd362639add02e2947f932762d7fb58e48b35eed671cfdbdc0"
+    },
+    {
+      "path": "data/books/pl-ka-meta.gz",
+      "bytes": 66591,
+      "sha256": "695f0030502cefa1530ae47d3b685f79b80d36a48d57ae0cfc505996e5ef256d"
+    },
+    {
+      "path": "data/books/pl-ka-st.gz",
+      "bytes": 65910,
+      "sha256": "9a6ec034a5436076f2bccb598386ac0f66c25c1eef9a6d121d4380981d2e8bdc"
+    },
+    {
+      "path": "data/books/pl-kp-bb.gz",
+      "bytes": 417151,
+      "sha256": "ef81ae42a4f99a9e337cdf0ad205d14eb716229c7a87ac88da083d8b682d5e00"
+    },
+    {
+      "path": "data/books/pl-kp-meta.gz",
+      "bytes": 40713,
+      "sha256": "52a5d6839d81dbb60c5369086d2ca404a8d0004d035d91354cba334e8108014b"
+    },
+    {
+      "path": "data/books/pl-kp-st.gz",
+      "bytes": 45132,
+      "sha256": "1a7cee5fcd987212628e78032703dd18fc73d86a3a1d001d8f70d0debea1a887"
+    },
+    {
+      "path": "data/books/pl-mo-bb.gz",
+      "bytes": 37339,
+      "sha256": "2559d2efdc1b2bb046507edf643ff1b4b2a64fba5eb8592c98abbdb5f0ade111"
+    },
+    {
+      "path": "data/books/pl-mo-meta.gz",
+      "bytes": 3103,
+      "sha256": "3980a4b8ef09d39dc170a7c053a850edd00a80038779b2048dbf32dc73277c07"
+    },
+    {
+      "path": "data/books/pl-mo-st.gz",
+      "bytes": 7143,
+      "sha256": "b9aff739869015f627f1bdafe3a91dbc56c0c391de4cb75ed3025b1d7ee72bfb"
+    },
+    {
+      "path": "data/books/pl-nk-bb.gz",
+      "bytes": 2554576,
+      "sha256": "91df747714c4d9babb152dff50cfd66428a3db81f01a6158a8493d9f1d2a153b"
+    },
+    {
+      "path": "data/books/pl-nk-meta.gz",
+      "bytes": 202320,
+      "sha256": "447421a1c7c08ede2dcfe1adaffa07c3fd50160fbf33c7ef8d33efb2c63da43d"
+    },
+    {
+      "path": "data/books/pl-nk-st.gz",
+      "bytes": 388644,
+      "sha256": "73973c57a558e783b6ed893581e11e9e27571d7065153ac235258c40493752df"
+    },
+    {
+      "path": "data/books/wcbb.gz",
+      "bytes": 36371,
+      "sha256": "f4aa9800a69cd8abbae85b114f81b571a11d08453eeb9ed46d23712822cd43c9"
+    },
+    {
+      "path": "data/meta/bkinfo.json",
+      "bytes": 351,
+      "sha256": "c5b536a9b9942d4c315bdf48bd2aaafba366fe43d29967f99399da2851f961d6"
+    },
+    {
+      "path": "data/meta/plinfo.json",
+      "bytes": 266,
+      "sha256": "c88d614a7c00a357b607bd6769a43c9f5f8dbef3cdc225a5d9807a08905895f3"
+    },
+    {
+      "path": "data/meta/wcmeta.json",
+      "bytes": 17468,
+      "sha256": "661a79dd101d11c400fde8caeb2808551ba376b0373d96b6358240bdfba7fe5f"
+    },
+    {
+      "path": "data/offstats.gz",
+      "bytes": 3360346,
+      "sha256": "c4881dd7fb7ae7570caadd44943e9724ded20b22cf8e1e65a897a87728418440"
+    },
+    {
+      "path": "index.html",
+      "bytes": 46562,
+      "sha256": "c3e0091e9febb26d39418becbaadcb56c8646373824406b95d92459508d72db1"
+    },
+    {
+      "path": "js/app-main.js",
+      "bytes": 55471,
+      "sha256": "9853777ff41f9cbd6ea72d3ce72783ddf44ddc53b247c0d6352a8d7c713e25d7"
+    },
+    {
+      "path": "js/data/openings.js",
+      "bytes": 365633,
+      "sha256": "83d8f356e99b05aea6e14d296e95822edce5c71287aa5fcb17583896439f1a91"
+    },
+    {
+      "path": "js/data/pieces.js",
+      "bytes": 11355,
+      "sha256": "d856b9d3958ebed2483df7ab07eadd696fa5a92a4a4b1dd045e0bbdd7c716b43"
+    },
+    {
+      "path": "js/data/positions.js",
+      "bytes": 337768,
+      "sha256": "e64abaedd235f909c6b14445b6275b70ea345f22a76a94da822239ad1d4a596f"
+    },
+    {
+      "path": "js/features/avf.js",
+      "bytes": 3740,
+      "sha256": "5448e2455f9afb1cb8702739959598a6346c85945bd779d8c250cb9bb4fbb0cd"
+    },
+    {
+      "path": "js/features/board-training.js",
+      "bytes": 42038,
+      "sha256": "e3d6cb931f9accdcaf3f1ae4c35b88138ad3d3a8b871d48b3daf585578f3a4df"
+    },
+    {
+      "path": "js/features/fx.js",
+      "bytes": 2384,
+      "sha256": "015a5fc728603d69505e8f4ad06bfd2451611ee6bfeffff74e054983a36f4268"
+    },
+    {
+      "path": "js/features/intro.js",
+      "bytes": 2250,
+      "sha256": "9534c9efed35752c2cbba99307b60c1b5eae35924191b7e472d0319ac1534c2d"
+    },
+    {
+      "path": "js/features/mate.js",
+      "bytes": 1515,
+      "sha256": "dfd04cf6147519abb2dddf489b4b33e0f3debafc4f4c00c77662fd6f232cce72"
+    },
+    {
+      "path": "js/features/persona.js",
+      "bytes": 8212,
+      "sha256": "7fcff7bb0a3e537a060df81aef5c51f4b94192e1f9d971fe582f3966be3e6d8c"
+    },
+    {
+      "path": "js/features/trail.js",
+      "bytes": 2536,
+      "sha256": "e9eb6bc0e4bae60292ca7c450c7ad0a671f2078dc607f4dbcd633fe1b6ce6b4a"
+    },
+    {
+      "path": "js/loader.js",
+      "bytes": 5019,
+      "sha256": "5c13dabb2c2fb82bc11ce5283934ef813b9ea2f9e11159d6cc82919cc9fd1b04"
+    },
+    {
+      "path": "js/vendor/chess.js",
+      "bytes": 47552,
+      "sha256": "1a6803b787dc4a6f71aabdd0b010cee7bf0fc70ce032f5ed8d7738684d431bfc"
+    },
+    {
+      "path": "legacy/Si_BIDAK_v6.html",
+      "bytes": 17358158,
+      "sha256": "86a52405543aabc7dbc37771888972822ac069224d524a737ba4f37bc8ea2cd5"
+    },
+    {
+      "path": "licenses/README.md",
+      "bytes": 721,
+      "sha256": "fed18c5ddebdb8fc631d3125f263fd5192f1134f46d129ec430d019001218b26"
+    },
+    {
+      "path": "licenses/cburnett-pieces/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "licenses/cburnett-pieces/NOTICE.md",
+      "bytes": 340,
+      "sha256": "10035710b4e0e242997637b4b018c640b680f9642438f196f7d644b82eed5dc0"
+    },
+    {
+      "path": "licenses/chess-openings/LICENSE",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "licenses/chess-openings/NOTICE.md",
+      "bytes": 323,
+      "sha256": "39afc5b2fbb9aa563e0435533bc6cbf119832e404cb3bf4db9e940130a5e7a14"
+    },
+    {
+      "path": "licenses/chess.js/LICENSE",
+      "bytes": 1315,
+      "sha256": "c09370a8369f5626b396dbb8f77306dd9bbcc48f973977f37067e06de29684ad"
+    },
+    {
+      "path": "licenses/chess.js/NOTICE.md",
+      "bytes": 349,
+      "sha256": "cec538058598ccd05e6c525fcdbdfea5347dc1d6a70682fb0c8ccfa460cfa024"
+    },
+    {
+      "path": "licenses/pgn-data/NOTICE.md",
+      "bytes": 1818,
+      "sha256": "00d9e54c756a8bd0a4b473fa7e9122c1e476d0d60223b03593e83eca1b115614"
+    },
+    {
+      "path": "licenses/stockfish/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "licenses/stockfish/NOTICE.md",
+      "bytes": 671,
+      "sha256": "d969e6c1102bf45de7d0bc2529055c9ed3be5329c2f85df8b22856a32afbbfff"
+    },
+    {
+      "path": "tools/Chessreps_PGN_Builder.zip",
+      "bytes": 6374,
+      "sha256": "046707082f24ab214ca7645fd7c7799a928c83574de5df686b1ecbc41369b073"
+    },
+    {
+      "path": "tools/chessreps_builder.py",
+      "bytes": 11219,
+      "sha256": "c3a69b213a17980bf28ce286f3d8a57cf242e756a4258b951bb07b21461bf561"
+    }
+  ]
+}

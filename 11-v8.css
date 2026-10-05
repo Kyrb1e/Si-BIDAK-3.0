@@ -1,0 +1,43 @@
+/* ===== v8: beranda klasik elegan (navy, emas antik, gading) + jejak kursor ===== */
+#intro{--gold:#c8a96b;--gold-hi:#ecdcae;--mist:#c3bfb2;--ivory:#f3ecda;--navy:#0b1a33;background:var(--navy);color:var(--ivory)}
+#intro::before,#intro::after{content:"";position:fixed;pointer-events:none;z-index:2}
+#intro::before{inset:14px;border:1px solid rgba(200,169,107,.6)}
+#intro::after{inset:21px;border:1px solid rgba(200,169,107,.2)}
+#intro .bg{background:radial-gradient(75% 65% at 50% 0%,#1d3b69 0%,#11254b 46%,#0a152b 100%);animation:none;overflow:hidden}
+#intro .bg::before{content:"";position:absolute;inset:-20%;background:
+ radial-gradient(30% 26% at 50% 14%,rgba(200,169,107,.20),transparent 70%),
+ radial-gradient(42% 36% at 8% 96%,rgba(34,78,146,.42),transparent 70%),
+ radial-gradient(36% 30% at 94% 90%,rgba(34,78,146,.30),transparent 70%);
+ animation:bgm 30s ease-in-out infinite alternate;will-change:transform}
+#intro .bg::after{content:"";position:absolute;inset:0;opacity:1;
+ background-image:conic-gradient(rgba(200,169,107,.05) 25%,transparent 0 50%,rgba(200,169,107,.05) 0 75%,transparent 0);
+ background-size:80px 80px;background-position:0 0;
+ -webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 46%,transparent 38%,#000 100%);mask-image:radial-gradient(ellipse 62% 58% at 50% 46%,transparent 38%,#000 100%)}
+#intro .wrap{padding:7vh 40px 44px}
+#intro .kn{width:76px;height:76px;margin:0 0 20px;display:grid;place-items:center;padding-bottom:.08em;font:2.3rem/1 'Libre Baskerville','Segoe UI Symbol','Noto Sans Symbols 2',serif;font-variant-emoji:text;color:var(--gold-hi);filter:none;animation:none;border:1px solid var(--gold);border-radius:50%;background:radial-gradient(circle at 50% 38%,rgba(200,169,107,.16),rgba(200,169,107,0) 70%);box-shadow:0 0 0 5px var(--navy),0 0 0 6px rgba(200,169,107,.42),0 0 46px rgba(200,169,107,.20)}
+#intro.rA .kn,#intro.rB .kn{animation:dr .9s .45s both}
+#intro h1{font-family:Cinzel,'Libre Baskerville',Georgia,serif!important;font-weight:700;font-size:clamp(2.8rem,8.5vw,5.2rem)!important;line-height:1.05!important;letter-spacing:.12em;margin:0 0 12px;padding:.06em 0 .06em .12em;
+ background:linear-gradient(180deg,#f7edca 0%,#dcc386 48%,#a98846 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+#intro .full{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;font-size:clamp(.95rem,2.2vw,1.2rem);letter-spacing:.02em;color:var(--gold-hi);margin:0 0 22px;animation:inUp .7s .08s both}
+#intro.rA .full{animation-name:rA;animation-delay:.62s}#intro.rB .full{animation-name:rB;animation-delay:.62s}
+#intro .sub{max-width:540px;font-family:'Libre Baskerville',Georgia,serif;font-size:.9rem;line-height:1.85;color:var(--mist);margin:0 0 6vh}
+#intro .lab{display:flex;align-items:center;gap:18px;width:min(460px,100%);margin:0 0 24px;font-family:'Libre Baskerville',Georgia,serif;font-style:italic;font-size:1rem;letter-spacing:.04em;text-transform:none;color:var(--gold)}
+#intro .lab::before,#intro .lab::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,107,.7))}
+#intro .lab::after{transform:scaleX(-1)}
+#intro .modes{gap:20px;max-width:800px;margin-bottom:6vh}
+#intro .mode.r{--c:var(--gold);--c2:var(--gold)}
+#intro .mode{--c:var(--gold);--c2:var(--gold);border-radius:2px;padding:28px 28px 24px;background:linear-gradient(165deg,rgba(70,110,185,.16),rgba(70,110,185,.05));border:1px solid rgba(200,169,107,.38);outline:1px solid rgba(200,169,107,.14);outline-offset:-7px;box-shadow:0 18px 40px rgba(0,0,0,.3);-webkit-backdrop-filter:none;backdrop-filter:none}
+#intro .mode::before{display:none}
+#intro .mode:hover,#intro .mode:focus-visible{transform:translateY(-4px);border-color:var(--gold-hi);background:linear-gradient(165deg,rgba(200,169,107,.16),rgba(70,110,185,.06));box-shadow:0 24px 50px rgba(0,0,0,.45),0 0 30px rgba(200,169,107,.12);outline:1px solid rgba(236,220,174,.38);outline-offset:-7px}
+#intro .mode svg{width:40px;height:40px;color:var(--gold);stroke-width:1.5}
+#intro .mode b{font-size:1.15rem;letter-spacing:.01em;margin:16px 0 8px;color:var(--ivory)}
+#intro .mode span{font-family:'Libre Baskerville',Georgia,serif;font-size:.8rem;line-height:1.75;color:var(--mist)}
+#intro .mode i{align-self:flex-start;margin-top:20px;padding:0 0 3px;border-radius:0;background:none;color:var(--gold-hi);border-bottom:1px solid rgba(200,169,107,.55);font:italic 400 .88rem 'Libre Baskerville',Georgia,serif;letter-spacing:.03em;transition:letter-spacing .25s,border-color .25s}
+#intro .mode:hover i,#intro .mode:focus-visible i{letter-spacing:.07em;border-color:var(--gold-hi)}
+#intro .row{gap:16px;padding-top:2vh}
+#intro .row div{animation:none}
+#intro .row .av{width:60px;height:60px;border-radius:50%;border:1px solid rgba(200,169,107,.55);box-shadow:0 0 0 3px var(--navy),0 0 0 4px rgba(200,169,107,.22);filter:saturate(.75)}
+#intro .row small{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;color:#a9a597;margin-top:9px}
+#trail{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:2050}
+@media(max-width:640px){#intro::before{inset:8px}#intro::after{inset:13px}#intro .wrap{padding:6vh 26px 32px}#intro .mode{padding:24px 22px 20px}}
+@media(prefers-reduced-motion:reduce){#intro .bg::before{animation:none!important}}

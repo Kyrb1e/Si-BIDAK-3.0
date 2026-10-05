@@ -1,0 +1,16 @@
+(function(){const M=document.getElementById('mate'),tm=[];const T=(f,t)=>tm.push(setTimeout(f,t));
+ window.mateHide=()=>{M.classList.remove('on');tm.splice(0).forEach(clearTimeout);FX.clear()};
+ window.mateFX=function(){if(!game.in_checkmate())return;mateHide();
+  const kc=game.turn(),win=kc==='w'?'b':'w',bd=game.board();let sq='';
+  bd.forEach((r,y)=>r.forEach((p,x)=>{if(p&&p.type==='k'&&p.color===kc)sq='abcdefgh'[x]+(8-y)}));
+  const el=document.querySelector('.sq[data-sq="'+sq+'"]');el&&el.classList.add('mated');
+  const mn=document.querySelector('main');mn.classList.remove('shake');void mn.offsetWidth;mn.classList.add('shake');
+  const P=BOT.on&&window.PRS&&PRS[BOT.p],bn=BOT.on?(P?P.n:'Stockfish'):'',lose=BOT.on&&win===BOT.side,res=win==='w'?'1-0':'0-1';
+  $('ms').textContent=BOT.on?(lose?bn+' menang kali ini. Skakmat · '+res:'Selamat! Anda mengalahkan '+bn+' · '+res):(win==='w'?'Putih':'Hitam')+' menang · '+res;
+  M.classList.toggle('lose',!!lose);
+  T(()=>{M.classList.add('on');if(lose)FX.embers(120);else{FX.cannon(0,1,90);FX.cannon(innerWidth,-1,90);FX.rain(70)}},1100);
+  T(()=>{if(!lose){FX.cannon(0,1,50);FX.cannon(innerWidth,-1,50)}},2300)};
+ const _pl=play;play=function(){const r=_pl.apply(this,arguments);if(game.in_checkmate())setTimeout(mateFX,350);return r};
+ $('mclose').onclick=mateHide;M.onclick=e=>{if(e.target===M)mateHide()};addEventListener('keydown',e=>{if(e.key==='Escape')mateHide()});
+ $('mnew').onclick=()=>{mateHide();(BOT.on?$('botnew'):$('reset')).click()};
+})();

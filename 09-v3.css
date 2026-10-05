@@ -1,0 +1,57 @@
+/* ===== v3: eksplorer gabungan, lawan bot, strip pemain ===== */
+.col-l{position:static}
+@media(min-width:861px) and (min-height:1050px){.col-l{position:sticky;top:12px}}
+#plhold,#plcard{display:none!important}
+#xcard [hidden],#botcard [hidden]{display:none!important}
+#xcard .xsrc{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 4px}
+#xcard .xsrc label{font-size:.74rem;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
+#xcard .xsrc select{flex:1;min-width:180px;padding:8px 10px;border-radius:8px;font-weight:600;border:1px solid var(--line);background:var(--soft);color:var(--ink)}
+#xcard .xinfo{margin:2px 0 12px;padding:6px 10px;border-left:3px solid var(--acc);background:var(--soft);border-radius:0 8px 8px 0;font-size:.76rem}
+#xcard .xinfo:empty{display:none}
+.xt{display:flex;gap:4px;padding:4px;background:var(--soft);border-radius:12px;margin:0 0 14px;overflow-x:auto;border:1px solid var(--line)}
+.xt button{flex:1 1 auto;white-space:nowrap;background:transparent!important;color:var(--mute)!important;border:0!important;border-radius:9px!important;padding:9px 12px!important;font-size:.76rem!important;font-weight:700!important;transition:background .2s,color .2s,box-shadow .2s}
+.xt button:hover:not([aria-selected=true]){color:var(--ink)!important;background:color-mix(in srgb,var(--card) 55%,transparent)!important}
+.xt button[aria-selected=true]{background:var(--card)!important;color:var(--ink)!important;box-shadow:0 1px 4px rgba(0,0,0,.2),inset 0 -2px 0 var(--acc)}
+.xp{animation:xin .22s ease-out}
+@keyframes xin{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.xsec{margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.xsec h3{margin:0 0 8px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+#xcard #book{max-height:720px;overflow-y:auto;padding-right:4px}
+#xcard .bk-row{animation:xin .18s ease-out}
+/* strip pemain */
+.pstrip{display:flex;align-items:center;gap:8px;margin:8px 0 8px 50px;padding:6px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;font-size:.82rem;min-height:38px;transition:border-color .25s,box-shadow .25s}
+.pstrip.on{border-color:var(--acc);box-shadow:0 0 0 2px color-mix(in srgb,var(--acc) 30%,transparent)}
+.pstrip .pk{width:24px;height:24px;border-radius:50%;background:var(--soft);display:grid;place-items:center;flex:none}
+.pstrip .pk img{width:20px;height:20px}
+.pstrip b{font-weight:700}
+.pstrip .pel{color:var(--mute);font-size:.74rem}
+.pstrip .padv{background:var(--soft);border-radius:999px;padding:0 8px;font-size:.74rem;font-weight:700}
+.pstrip .pturn{margin-left:auto;font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--on);background:var(--acc);border-radius:999px;padding:1px 9px;font-weight:700}
+.dots{display:inline-flex;gap:3px;margin-left:4px}.dots i{width:5px;height:5px;border-radius:50%;background:var(--acc);animation:bnc 1s infinite ease-in-out}
+.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+@keyframes bnc{0%,80%,100%{transform:translateY(0);opacity:.4}40%{transform:translateY(-4px);opacity:1}}
+/* kartu bot */
+.bot-card{border-top-color:var(--pop)!important}
+.bot-row{display:flex;align-items:center;gap:10px;margin:10px 0;flex-wrap:wrap}
+.bot-lab{font-size:.72rem;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;min-width:88px}
+.seg{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.seg button{background:var(--soft)!important;color:var(--ink)!important;border:1px solid var(--line)!important;padding:6px 11px!important;font-size:.76rem!important;font-weight:600!important;border-radius:999px!important}
+.seg button:hover{border-color:var(--acc)!important}
+.seg button[aria-pressed=true]{background:var(--btn)!important;color:var(--bi)!important;border-color:var(--btn)!important}
+.bot-desc{margin:4px 0 12px;padding:8px 10px;background:var(--soft);border-radius:8px;min-height:2.6em}
+.botgo{width:100%;padding:12px 16px!important;font-size:.9rem!important;background:var(--acc)!important;color:var(--on)!important;box-shadow:0 2px 0 rgba(0,0,0,.18);transition:transform .12s,box-shadow .12s,filter .15s}
+.botgo:hover{filter:brightness(1.07);transform:translateY(-1px);box-shadow:0 4px 10px rgba(0,0,0,.22)}
+.bot-hd{display:flex;align-items:center;gap:12px}
+.bot-hd>div{flex:1;min-width:0}.bot-hd b{display:block;font-size:.98rem}.bot-hd .cnt{margin:0}
+.bot-av{width:44px;height:44px;border-radius:12px;background:var(--btn);display:grid;place-items:center;flex:none}
+.bot-av img{width:34px;height:34px;filter:invert(1) brightness(1.6)}
+.bot-st{font-size:.74rem;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--soft);white-space:nowrap}
+.bot-st.th{background:var(--acc);color:var(--on)}
+.bot-st.end{background:var(--btn);color:var(--bi)}
+.think{height:3px;margin:12px 0 4px;border-radius:2px;background:var(--soft);overflow:hidden;opacity:.5}
+.think i{display:block;height:100%;width:35%;background:linear-gradient(90deg,transparent,var(--acc),transparent);transform:translateX(-100%)}
+.think.on{opacity:1}.think.on i{animation:sweep 1.1s infinite ease-in-out}
+@keyframes sweep{to{transform:translateX(300%)}}
+#botlive .btns{margin-top:12px}
+@media(max-width:860px){main{grid-template-columns:minmax(0,1fr)!important}.pstrip{margin-left:0}.bot-lab{min-width:100%}}
+@media(prefers-reduced-motion:reduce){.xp,#xcard .bk-row,.dots i,.think i{animation:none!important}}

@@ -1,0 +1,3 @@
+*.gz binary
+*.wasm binary
+*.zip binary

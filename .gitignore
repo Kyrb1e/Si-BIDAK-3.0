@@ -1,0 +1,11 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local/runtime artifacts
+index_offline.html
+stats.json
+__pycache__/
+*.pyc
